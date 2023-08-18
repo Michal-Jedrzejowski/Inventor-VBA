@@ -18,6 +18,8 @@ Sub OpenFileLocation()
 
     Dim ObjPath As String
     ObjPath = obj.ReferencedFileDescriptor.FullFileName
+    ObjPath = """" + ObjPath + """"
+    
     Shell "C:\Windows\explorer.exe /select," & ObjPath, vbMaximizedFocus
         
 End Sub
